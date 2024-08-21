@@ -1,12 +1,25 @@
 .login-button {
   display: flex;
-  /* flex-direction: column; */
   justify-content: flex-end;
-  margin: 20px;
+  margin: 20px 20px 0px 20px;
+  cursor: pointer;
 }
 
 .login-icon {
   margin-right: 10px;
+}
+/* 
+.login-form .email-input {
+  width: 50%;
+}
+
+.login-form .password-input {
+  width: 50%;
+} */
+
+.login-form .login-submit-btn {
+  display: flex;
+  justify-content: center;
 }
 
 .nav-section {
@@ -17,6 +30,7 @@
 .menu-list {
   display: flex;
   list-style-type: none;
+  white-space: nowrap;
 }
 
 .menu-list li {
@@ -31,19 +45,39 @@
 .input-container {
   position: relative; /* 아이콘의 위치를 absolute로 지정가능하게해줌*/
   display: flex;
+  justify-content: flex-end;
   align-items: center;
+  padding-bottom: 10px;
 }
 
 .search-input {
   padding-left: 30px; /* 아이콘의 크기에 따라 조정, 아이콘이 input 내부에 겹치지 않도록 해줌 */
   width: 100%;
-  height: 35%;
+  height: 55%;
   border: none;
   border-bottom: 1px solid black;
+  padding-bottom: 3px;
   color: gray;
 }
 
 .search-icon {
   position: absolute; /* input의 왼쪽에 위치시키고, 적절한 left 값을 설정하기*/
   left: 5px; /* 아이콘과 입력창 사이의 간격 조정 */
+  padding-bottom: 3px;
+}
+
+.product-card {
+  margin-bottom: 10px;
+}
+
+.product-card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.product-card img {
+  width: 300px;
+  height: 380px;
+  border-radius: 15px;
+  margin-top: 10px;
 }
