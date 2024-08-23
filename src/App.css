@@ -25,6 +25,7 @@
 .nav-section {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .menu-list {
@@ -35,11 +36,6 @@
 
 .menu-list li {
   padding: 10px;
-}
-
-.menu-area {
-  display: flex;
-  justify-content: center;
 }
 
 .input-container {
@@ -66,18 +62,92 @@
   padding-bottom: 3px;
 }
 
-.product-card {
+.card {
   margin-bottom: 10px;
+  text-align: center;
+  border-color: transparent !important;
 }
 
-.product-card:hover {
-  transform: scale(1.1);
+.card:hover {
+  transform: scale(1.05);
   cursor: pointer;
 }
 
-.product-card img {
-  width: 300px;
-  height: 380px;
+.card img {
   border-radius: 15px;
   margin-top: 10px;
+}
+
+.product-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-img img {
+  border-radius: 10px;
+  width: 80%;
+}
+
+.price {
+  margin-top: 5px;
+}
+
+.choice {
+  margin-top: 5px;
+}
+
+#dropdown-basic {
+  border: 1px solid black;
+}
+
+.drop-down {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.add-button {
+  border: none;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  width: 80%;
+}
+
+/* 햄버거바 부분 */
+.menu-area {
+  display: flex;
+  justify-content: center;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+}
+/* 햄버거바 부분 끝 */
+
+/* Media Query for Mobile Screens */
+@media screen and (max-width: 768px) {
+  .menu-area {
+    display: none; /* Hide menu by default on mobile */
+  }
+
+  .menu-area.show {
+    display: flex; /* Show menu when hamburger is clicked */
+    flex-direction: column;
+  }
+
+  .burger-menu {
+    display: block; /* Show hamburger icon on mobile */
+  }
+
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-list li {
+    padding: 15px;
+  }
 }
